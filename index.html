@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skynex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Landing -->
+  <section id="landing" class="screen active">
+    <h1>Skynex</h1>
+    <p>Decentralized AI Campus Brain</p>
+    <input id="nameInput" placeholder="Enter your name">
+    <button onclick="enterSystem()">Enter System</button>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboard" class="screen">
+    <h2 id="welcome"></h2>
+
+    <div class="menu">
+      <button onclick="showPanel('attendance')">Attendance</button>
+      <button onclick="showPanel('voting')">Voting</button>
+      <button onclick="showPanel('certificate')">Certificates</button>
+      <button onclick="showPanel('skills')">Skills</button>
+      <button onclick="showPanel('agents')">AI Agents</button>
+    </div>
+
+    <!-- Attendance -->
+    <div id="attendance" class="panel">
+      <h3>Face-scan Attendance</h3>
+      <button onclick="markAttendance()">Mark Attendance</button>
+      <p id="attendanceResult"></p>
+    </div>
+
+    <!-- Voting -->
+    <div id="voting" class="panel">
+      <h3>Project Leader Voting</h3>
+      <input id="voteName" placeholder="Candidate name">
+      <button onclick="castVote()">Vote</button>
+      <p id="voteResult"></p>
+    </div>
+
+    <!-- Certificates -->
+    <div id="certificate" class="panel">
+      <h3>Issue Skill Certificate</h3>
+      <input id="certSkill" placeholder="Skill name">
+      <button onclick="issueCert()">Issue</button>
+      <p id="certResult"></p>
+    </div>
+
+    <!-- Skills -->
+    <div id="skills" class="panel">
+      <h3>Add Project</h3>
+      <input id="projectName" placeholder="Project name">
+      <button onclick="addProject()">Analyze</button>
+      <div id="skillOutput"></div>
+    </div>
+
+    <!-- AI Agents -->
+    <div id="agents" class="panel">
+      <h3>AI Agents Panel</h3>
+      <ul>
+        <li>Campus Guardian → monitoring performance</li>
+        <li>Skill Prophet → predicting career path</li>
+        <li>Decision Oracle → suggesting best votes</li>
+        <li>Reputation Engine → calculating trust score</li>
+        <li>Opportunity Hunter → finding jobs</li>
+      </ul>
+      <button onclick="runAgents()">Run Automation</button>
+      <p id="agentResult"></p>
+    </div>
+
+    <button class="back" onclick="home()">Back</button>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

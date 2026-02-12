@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #f0f9ff, #e0f2fe);
+  color: #0f172a;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 48px;
+  background: linear-gradient(90deg, #06b6d4, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.screen {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.active {
+  display: block;
+}
+
+.menu button {
+  margin: 8px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #06b6d4, #6366f1);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin: 8px;
+}
+
+.panel {
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 12px;
+  max-width: 400px;
+  display: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.skill {
+  display: inline-block;
+  background: #06b6d4;
+  color: white;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+}
+
+.back {
+  background: black;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(15px);}
+  to {opacity:1; transform:translateY(0);}
+}
